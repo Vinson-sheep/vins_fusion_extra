@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="vins_fusion_extra" type="pose_tf_node" name="pose_transform_vins" output="screen">
+        <param name="sub_odom_topic" value="/vins_estimator/camera_pose" />
+        <param name="pub_pose_topic" value="mavros/vision_pose/pose" />
+        <param name="pub_rate" value="30" />
+        <param name="pub_RPY" value="true" />
+    </node>
+</launch>
